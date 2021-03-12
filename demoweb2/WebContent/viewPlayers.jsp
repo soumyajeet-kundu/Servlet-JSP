@@ -13,11 +13,12 @@
 PlayerDao pd=new PlayerDao();
 List<Player> li=pd.getAllPlayers();
 %>
-<table>
+<table >
 <tr>
 <th>Player Number</th>
 <th>Player Name</th>
 <th>Country</th>
+<th>DOB</th>
 <th></th>
 </tr>
 <%
@@ -28,7 +29,7 @@ for(Player p:li){
 <td><%=p.getName() %></td>
 <td><%=p.getCountry() %></td>
 <td><%=p.getDateOfBirth() %></td>
-<td><a href="editplayer.jsp?id=<%=p.getId()%>">Update</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="editPlayer.jsp?id=<%=p.getId()%>">Update</a></td>
 </tr>
 <%} %>
 </table>
