@@ -1,5 +1,8 @@
 <%@ page import="java.sql.*"%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="${contextPath}/resource/bootstrap.min.css" rel="stylesheet"><br>
 <%
+
     String userName = request.getParameter("userName");   
     String password = request.getParameter("password");
     Class.forName("com.mysql.jdbc.Driver");
@@ -13,6 +16,6 @@
         response.sendRedirect("success.jsp");
        
     } else {
-        out.println("Invalid password <a href='index.jsp'>try again</a>");
+        out.println("<h4>Invalid password</h4><br><a href='index.jsp' class='btn btn-warning' role='button'>Try again</a>");
     }
 %>
